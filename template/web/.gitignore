@@ -4,8 +4,8 @@
 # misc
 .DS_Store
 .env*
+!.env
 !.env.development.template
-!.env.production
 .cache
 
 # gatsby files
