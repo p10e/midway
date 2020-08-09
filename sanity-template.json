@@ -19,58 +19,53 @@
       "url": "https://www.netlify.com/"
     }
   ],
-  "deployments": [
-    {
-      "id": "studio",
-      "type": "studio",
-      "title": "Sanity Studio",
-      "description": "A Sanity Studio with dynamic product imports from Shopify.",
-      "dir": "./studio",
-      "provider": {
-        "name": "netlify",
-        "config": {
-          "base": "/",
+  "deployment": {
+    "provider": "netlify",
+    "sites": [
+      {
+        "id": "studio",
+        "type": "studio",
+        "title": "Sanity Studio",
+        "description": "A Sanity Studio with dynamic product imports from Shopify.",
+        "dir": "./studio",
+        "buildSettings": {
           "dir": "studio/dist",
           "cmd": "npm run build-studio && cp studio/netlify.toml studio/dist"
+        },
+        "previewMedia": {
+          "type": "image",
+          "src": "assets/studio.jpg",
+          "alt": "A preview image of the Sanity Studio."
         }
       },
-      "previewMedia": {
-        "type": "image",
-        "src": "assets/studio.jpg",
-        "alt": "A preview image of the Sanity Studio."
-      }
-    },
-    {
-      "id": "web",
-      "type": "web",
-      "title": "Gatsby Front-end",
-      "description": "A fresh Gatsby theme to show off your products.",
-      "dir": "./web",
-      "requiredTokens": [
-        {
-          "role": "deploy-studio",
-          "label": "GraphQL API Deployer"
-        }
-      ],
-      "provider": {
-        "name": "netlify",
-        "config": {
-          "base": "/",
+      {
+        "id": "web",
+        "type": "web",
+        "title": "Gatsby Front-end",
+        "description": "A fresh Gatsby theme to show off your products.",
+        "dir": "./web",
+        "requiredTokens": [
+          {
+            "role": "deploy-studio",
+            "label": "GraphQL API Deployer"
+          }
+        ],
+        "buildSettings": {
           "dir": "web/public",
           "cmd": "npm run build-web"
-        }
-      },
-      "previewMedia": {
-        "type": "image",
-        "src": "assets/frontend.jpg",
-        "alt": "A preview image of the Gatsby front-end."
-      },
-      "requiredCorsOrigins": [
-        {
-          "origin": "http://localhost:8000",
-          "allowCredentials": false
-        }
-      ]
-    }
-  ]
+        },
+        "previewMedia": {
+          "type": "image",
+          "src": "assets/frontend.jpg",
+          "alt": "A preview image of the Gatsby front-end."
+        },
+        "requiredCorsOrigins": [
+          {
+            "origin": "http://localhost:8000",
+            "allowCredentials": false
+          }
+        ]
+      }
+    ]
+  }
 }
