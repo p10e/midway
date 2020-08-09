@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "sanity-template-midway",
+  "name": "<#< repository.name >#>",
   "version": "0.8.2",
   "scripts": {
     "build": "lerna run build --parallel",

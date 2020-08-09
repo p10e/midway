@@ -1,6 +1,6 @@
 {
   "private": false,
-  "name": "example-studio",
+  "name": "<#< repository.name >#>-studio",
   "version": "1.0.0",
   "author": "Kevin Green",
   "scripts": {

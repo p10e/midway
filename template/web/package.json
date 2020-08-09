@@ -1,6 +1,6 @@
 {
-  "name": "midway",
   "private": true,
+  "name": "<#< repository.name >#>-web",
   "description": "Boilerplate for Gatsby + Sanity + Shopify",
   "version": "0.1.0",
   "author": "You <kevin@ctrlaltdel.wprld>",

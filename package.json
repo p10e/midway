@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@p10e/sanity-template-midway",
+  "name": "sanity-template-midway",
   "scripts": {
     "build": "sanity-template build --template-values dev/template-values-production.json",
     "dev": "sanity-template watch --template-values dev/template-values-development.json",
