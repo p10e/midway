@@ -1,0 +1,76 @@
+{
+  "version": 0,
+  "title": "Midway",
+  "description": "An opinionated starter template for Gatsby + Sanity + Shopify.",
+  "previewMedia": {
+    "type": "image",
+    "src": "assets/frontend.jpg",
+    "alt": "A screenshot of the Midway starter."
+  },
+  "technologies": [
+    {
+      "id": "gatsby",
+      "name": "Gatsby",
+      "url": "https://www.gatsbyjs.org/"
+    },
+    {
+      "id": "netlify",
+      "name": "Netlify",
+      "url": "https://www.netlify.com/"
+    }
+  ],
+  "deployments": [
+    {
+      "id": "studio",
+      "type": "studio",
+      "title": "Sanity Studio",
+      "description": "A Sanity Studio with dynamic product imports from Shopify.",
+      "dir": "./studio",
+      "provider": {
+        "name": "netlify",
+        "config": {
+          "base": "/",
+          "dir": "/studio/dist",
+          "cmd": "npm run build-studio && cp studio/netlify.toml studio/dist"
+        }
+      },
+      "previewMedia": {
+        "type": "image",
+        "src": "assets/studio.jpg",
+        "alt": "A preview image of the Sanity Studio."
+      }
+    },
+    {
+      "id": "web",
+      "type": "web",
+      "title": "Gatsby Front-end",
+      "description": "A fresh Gatsby theme to show off your products.",
+      "dir": "./web",
+      "requiredTokens": [
+        {
+          "role": "deploy-studio",
+          "label": "GraphQL API Deployer"
+        }
+      ],
+      "provider": {
+        "name": "netlify",
+        "config": {
+          "base": "/",
+          "dir": "/web/public",
+          "cmd": "npm run build-web"
+        }
+      },
+      "previewMedia": {
+        "type": "image",
+        "src": "assets/frontend.jpg",
+        "alt": "A preview image of the Gatsby front-end."
+      },
+      "requiredCorsOrigins": [
+        {
+          "origin": "http://localhost:8000",
+          "allowCredentials": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es2019",
+    "module": "commonjs",
+    "lib": [
+      "es2019",
+      "dom"
+    ],
+    "jsx": "react",
+    "strict": true,
+    "baseUrl": "./",
+    "esModuleInterop": true
+  },
+  "exclude": [
+    "src/lambda"
+  ]
+}

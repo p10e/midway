@@ -1,12 +1,11 @@
 {
   "root": true,
-  "api": {
-    "projectId": "hinqmch5",
-    "dataset": "production"
-  },
   "project": {
-    "name": "Midway",
-    "basePath": "/"
+    "name": "<#< sanity.projectTitle >#>"
+  },
+  "api": {
+    "projectId": "<#< sanity.projectId >#>",
+    "dataset": "<#< sanity.dataset >#>"
   },
   "plugins": [
     "@sanity/base",
