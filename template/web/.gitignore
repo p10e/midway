@@ -16,10 +16,6 @@ public
 yarn-error.log
 .pnp/
 .pnp.js
-yarn.lock
-
-# NPM
-package-lock.json
 
 # Yarn Integrity file
 .yarn-integrity
