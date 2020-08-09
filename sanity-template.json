@@ -29,8 +29,8 @@
       "provider": {
         "name": "netlify",
         "config": {
-          "base": "/",
-          "dir": "/studio/dist",
+          "base": "",
+          "dir": "studio/dist",
           "cmd": "npm run build-studio && cp studio/netlify.toml studio/dist"
         }
       },
@@ -55,8 +55,8 @@
       "provider": {
         "name": "netlify",
         "config": {
-          "base": "/",
-          "dir": "/web/public",
+          "base": "",
+          "dir": "web/public",
           "cmd": "npm run build-web"
         }
       },
